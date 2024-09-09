@@ -1,6 +1,6 @@
 
 resource "azurerm_network_interface" "demonetworkinterface" {
-  name                = "demonic-1"
+  name                = "demonic"
   location            = azurerm_resource_group.demoresourcegroup.location
   resource_group_name = azurerm_resource_group.demoresourcegroup.name
 
@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "demonetworkinterface" {
 }
 
 resource "azurerm_linux_virtual_machine" "demolinuxvm" {
-  name                            = "demolinuxmachine-1"
+  name                            = "demolinuxmachine"
   resource_group_name             = azurerm_resource_group.demoresourcegroup.name
   location                        = azurerm_resource_group.demoresourcegroup.location
   size                            = "Standard_D2_V2"
