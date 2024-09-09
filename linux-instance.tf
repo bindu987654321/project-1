@@ -5,7 +5,7 @@ resource "azurerm_network_interface" "demonetworkinterface" {
   resource_group_name = azurerm_resource_group.demoresourcegroup.name
 
   ip_configuration {
-    name                          = "internal-1"
+    name                          = "internal"
     subnet_id                     = azurerm_subnet.demosubnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.demopublicip.id
