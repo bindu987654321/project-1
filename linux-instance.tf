@@ -43,9 +43,7 @@ resource "azurerm_linux_virtual_machine" "demolinuxvm" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt-get update",
-      "sudo apt-get install software-properties-common -y",
-      "sudo apt-add-repository --yes --update ppa:ansible/ansible",
-      "sudo apt-get install ansible -y"
+      "sudo apt-get install openjdk-17-jdk -y"
     ]
 
     connection {
